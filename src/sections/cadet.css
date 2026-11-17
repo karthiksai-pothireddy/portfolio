@@ -64,18 +64,16 @@
 @media (min-width: 1024px) { .cadet-headline { font-size: 13.5vw; } }
 .cadet-sub { display: none; font-weight: 600; color: var(--muted); }
 
-/* Bottom-left tagline, styled like Jack's hero paragraph */
+/* Bottom corners: quote + Scroll Down (left), Contact Me (right) — Jack-style purple buttons */
+.cadet-bl, .cadet-br { bottom: calc(50% - 370 * var(--u)); z-index: 6; }
+.cadet-bl { left: calc(50% - 665 * var(--u)); display: flex; flex-direction: column; align-items: flex-start; gap: calc(18 * var(--u)); }
+.cadet-br { right: calc(50% - 665 * var(--u)); }
 .cadet-tagline {
-  left: calc(50% - 665 * var(--u)); bottom: calc(50% - 352 * var(--u)); z-index: 6;
   font-family: 'Kanit', sans-serif; font-weight: 300; text-transform: uppercase; letter-spacing: .025em;
   line-height: 1.375; color: #D7E2EA; font-size: clamp(0.75rem, 1.4vw, 1.5rem); max-width: 260px;
   text-shadow: 0 1px 2px rgba(2, 4, 13, .9), 0 0 14px rgba(2, 4, 13, .85), 0 0 28px rgba(2, 4, 13, .7);
 }
-.cadet-cap.l { display: none; }
-
-.cadet-cap { font-weight: 700; font-size: calc(12.2 * var(--u)); top: calc(50% + 340 * var(--u)); letter-spacing: .02em; color: #fff; text-decoration: none; z-index: 6; }
-.cadet-cap.l { left: calc(50% - 665 * var(--u)); }
-.cadet-cap.r { right: calc(50% - 665 * var(--u)); }
+.cadet-bl a, .cadet-br a { font-family: 'Kanit', sans-serif; }
 
 /* PUSH ME */
 .cadet-push {
@@ -108,7 +106,6 @@
   .cadet-copy { top: 78px; padding: 0 8px; }
   .cadet-sub { display: block; font-size: 15px; margin-top: 10px; }
   .cadet-tagline { display: none; }
-  .cadet-cap.l { display: block; }
-  .cadet-cap { top: auto; bottom: 20px; font-size: 12px; }
-  .cadet-cap.l { left: 16px; } .cadet-cap.r { right: 16px; }
+  .cadet-bl, .cadet-br { bottom: 20px; }
+  .cadet-bl { left: 16px; } .cadet-br { right: 16px; }
 }

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import './cadet.css';
+import { ContactButton, ScrollButton } from '../components/Buttons';
 
 const CDN = 'https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/';
 const PLATE = `${CDN}a194141a-44ba-44bb-8372-e6720af994ca.jpg`;
@@ -86,8 +87,8 @@ export default function HeroSection() {
       run('.cadet-nav', drop, 80);
       run('.cadet-headline', [{ opacity: 0, filter: 'blur(14px)', transform: 'translateY(30px)' }, { opacity: 1, filter: 'blur(0)', transform: 'none' }], 450, 900);
       run('.cadet-sub', rise, 800);
-      run('.cadet-tagline', rise, 900);
-      run('.cadet-cap', rise, 1000);
+      run('.cadet-bl', rise, 900);
+      run('.cadet-br', rise, 1000);
       run('.cadet-push', [{ opacity: 0, transform: 'scale(.4)' }, { opacity: 1, transform: 'scale(1.08)', offset: 0.7 }, { opacity: 1, transform: 'scale(1)' }], 1300, 500);
     }
 
@@ -157,9 +158,13 @@ export default function HeroSection() {
         <p className="cadet-sub">Building systems that scale past the stars</p>
       </div>
 
-      <p className="abs cadet-tagline">Building systems that scale past the stars</p>
-      <a className="abs cadet-cap l" href="#about">Scroll to explore ↓</a>
-      <a className="abs cadet-cap r" href="#contact">Contact Me →</a>
+      <div className="abs cadet-bl">
+        <p className="cadet-tagline">Building systems that scale past the stars</p>
+        <ScrollButton />
+      </div>
+      <div className="abs cadet-br">
+        <ContactButton compact />
+      </div>
 
       <div ref={ring} className="cadet-ring" />
       <div ref={dot} className="cadet-dot" />
