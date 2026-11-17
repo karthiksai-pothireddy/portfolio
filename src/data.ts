@@ -63,7 +63,7 @@ export const EXPERIENCE = [
   {
     company: 'CRED',
     role: 'Full Stack Engineer',
-    meta: 'Mar 2019 – Dec 2021 · Bangalore, India',
+    meta: 'May 2020 – Dec 2021 · Bangalore, India',
     stats: [
       { value: '10M+', label: 'monthly ledger txns' },
       { value: '100K+/s', label: 'concurrent redemptions' },
