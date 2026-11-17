@@ -84,9 +84,9 @@ export default function HeroSection() {
       const rise = [{ opacity: 0, transform: 'translateY(16px)' }, { opacity: 1, transform: 'none' }];
       run('.cadet-logo', drop, 0);
       run('.cadet-nav', drop, 80);
-      run('.cadet-eyebrow', [{ opacity: 0, letterSpacing: '.9em' }, { opacity: 1, letterSpacing: '.46em' }], 250, 900);
       run('.cadet-headline', [{ opacity: 0, filter: 'blur(14px)', transform: 'translateY(30px)' }, { opacity: 1, filter: 'blur(0)', transform: 'none' }], 450, 900);
       run('.cadet-sub', rise, 800);
+      run('.cadet-tagline', rise, 900);
       run('.cadet-cap', rise, 1000);
       run('.cadet-push', [{ opacity: 0, transform: 'scale(.4)' }, { opacity: 1, transform: 'scale(1.08)', offset: 0.7 }, { opacity: 1, transform: 'scale(1)' }], 1300, 500);
     }
@@ -153,11 +153,11 @@ export default function HeroSection() {
       </nav>
 
       <div className="abs cadet-copy">
-        <p className="cadet-eyebrow">HI, I&apos;M</p>
-        <h1 className="cadet-headline">KARTHIK</h1>
+        <h1 className="cadet-headline hero-heading">Hi, i&apos;m karthik</h1>
         <p className="cadet-sub">Building systems that scale past the stars</p>
       </div>
 
+      <p className="abs cadet-tagline">Building systems that scale past the stars</p>
       <a className="abs cadet-cap l" href="#about">Scroll to explore ↓</a>
       <a className="abs cadet-cap r" href="#contact">Contact Me →</a>
 

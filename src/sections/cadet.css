@@ -52,15 +52,26 @@
 .cadet-nav a { color: #fff; text-decoration: none; font-weight: 600; font-size: calc(18 * var(--u)); letter-spacing: .04em; transition: opacity .2s; }
 .cadet-nav a:hover { opacity: .7; }
 
-/* Copy */
-.cadet-copy { left: 0; right: 0; top: calc(50% - 305 * var(--u)); text-align: center; pointer-events: none; }
-.cadet-eyebrow { font-weight: 700; font-size: calc(18 * var(--u)); letter-spacing: .46em; color: var(--muted); padding-left: .46em; }
+/* Copy: headline uses the "Hi, i'm jack" style (Kanit Black, gradient, viewport-sized) */
+.cadet-copy { left: 0; right: 0; top: calc(50% - 318 * var(--u)); text-align: center; pointer-events: none; overflow: hidden; }
 .cadet-headline {
-  font-family: 'Archivo', sans-serif; font-style: italic; font-weight: 900; font-stretch: 94%;
-  font-size: calc(100 * var(--u)); line-height: 1; letter-spacing: -.02em; margin-top: calc(14 * var(--u));
-  text-shadow: 0 0 calc(14 * var(--u)) #fff, 0 0 calc(34 * var(--u)) #BFD4FF, 0 0 calc(70 * var(--u)) #3D7BFF;
+  font-family: 'Kanit', sans-serif; font-weight: 900; text-transform: uppercase;
+  letter-spacing: -0.025em; line-height: 1; white-space: nowrap; width: 100%;
+  font-size: 12vw;
 }
-.cadet-sub { font-weight: 600; font-size: calc(23 * var(--u)); color: var(--muted); margin-top: calc(9 * var(--u)); }
+@media (min-width: 640px) { .cadet-headline { font-size: 12.5vw; } }
+@media (min-width: 768px) { .cadet-headline { font-size: 13vw; } }
+@media (min-width: 1024px) { .cadet-headline { font-size: 13.5vw; } }
+.cadet-sub { display: none; font-weight: 600; color: var(--muted); }
+
+/* Bottom-left tagline, styled like Jack's hero paragraph */
+.cadet-tagline {
+  left: calc(50% - 665 * var(--u)); bottom: calc(50% - 352 * var(--u)); z-index: 6;
+  font-family: 'Kanit', sans-serif; font-weight: 300; text-transform: uppercase; letter-spacing: .025em;
+  line-height: 1.375; color: #D7E2EA; font-size: clamp(0.75rem, 1.4vw, 1.5rem); max-width: 260px;
+  text-shadow: 0 1px 2px rgba(2, 4, 13, .9), 0 0 14px rgba(2, 4, 13, .85), 0 0 28px rgba(2, 4, 13, .7);
+}
+.cadet-cap.l { display: none; }
 
 .cadet-cap { font-weight: 700; font-size: calc(12.2 * var(--u)); top: calc(50% + 340 * var(--u)); letter-spacing: .02em; color: #fff; text-decoration: none; z-index: 6; }
 .cadet-cap.l { left: calc(50% - 665 * var(--u)); }
@@ -94,11 +105,10 @@
   .cadet-disc { width: 28px; height: 28px; }
   .cadet-nav { right: 16px; top: 26px; gap: 12px; }
   .cadet-nav a { font-size: 12px; letter-spacing: .02em; }
-  .cadet-copy { top: 84px; padding: 0 16px; }
-  .cadet-eyebrow { font-size: 14px; }
-  .cadet-headline { font-size: clamp(40px, 13vw, 64px); margin-top: 8px;
-    text-shadow: 0 0 10px #fff, 0 0 24px #BFD4FF, 0 0 48px #3D7BFF; }
-  .cadet-sub { font-size: 16px; margin-top: 8px; }
+  .cadet-copy { top: 78px; padding: 0 8px; }
+  .cadet-sub { display: block; font-size: 15px; margin-top: 10px; }
+  .cadet-tagline { display: none; }
+  .cadet-cap.l { display: block; }
   .cadet-cap { top: auto; bottom: 20px; font-size: 12px; }
   .cadet-cap.l { left: 16px; } .cadet-cap.r { right: 16px; }
 }
