@@ -1,6 +1,6 @@
-import { Mail, GraduationCap, Github, Linkedin, Download } from 'lucide-react';
+import { Mail, GraduationCap, Linkedin, Download } from 'lucide-react';
 import FadeIn from '../components/FadeIn';
-import { ContactButton, EMAIL, GITHUB_URL, LINKEDIN_URL, RESUME_URL } from '../components/Buttons';
+import { ContactButton, EMAIL, LINKEDIN_URL, RESUME_URL } from '../components/Buttons';
 
 export default function ContactSection() {
   return (
@@ -31,7 +31,6 @@ export default function ContactSection() {
       <FadeIn delay={0.35} className="flex gap-4">
         {[
           { href: LINKEDIN_URL, label: 'LinkedIn', Icon: Linkedin },
-          { href: GITHUB_URL, label: 'GitHub', Icon: Github },
         ]
           .filter((l) => l.href)
           .map(({ href, label, Icon }) => (

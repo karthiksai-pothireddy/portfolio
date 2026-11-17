@@ -15,4 +15,4 @@ npm run dev
 
 Build for production with `npm run build` (output in `dist/`).
 
-Content lives in `src/data.ts`; links (email, GitHub, LinkedIn, resume) are in `src/components/Buttons.tsx`.
+Content lives in `src/data.ts`; links (email, LinkedIn, resume) are in `src/components/Buttons.tsx`.
