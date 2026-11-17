@@ -83,7 +83,6 @@ export default function HeroSection() {
         st.querySelectorAll<HTMLElement>(sel).forEach((el) => anims.push(el.animate(kf, { duration: dur, delay, easing: E, fill: 'backwards' })));
       const drop = [{ opacity: 0, transform: 'translateY(-24px)' }, { opacity: 1, transform: 'none' }];
       const rise = [{ opacity: 0, transform: 'translateY(16px)' }, { opacity: 1, transform: 'none' }];
-      run('.cadet-logo', drop, 0);
       run('.cadet-nav', drop, 80);
       run('.cadet-headline', [{ opacity: 0, filter: 'blur(14px)', transform: 'translateY(30px)' }, { opacity: 1, filter: 'blur(0)', transform: 'none' }], 450, 900);
       run('.cadet-sub', rise, 800);
@@ -141,10 +140,6 @@ export default function HeroSection() {
         </button>
       </div>
 
-      <a className="abs cadet-logo" href="#">
-        <span className="cadet-disc" />
-        <span>Karthik</span>
-      </a>
       <nav className="abs cadet-nav">
         {NAV.map((n) => (
           <a key={n.label} href={n.href} download={'download' in n ? true : undefined}>

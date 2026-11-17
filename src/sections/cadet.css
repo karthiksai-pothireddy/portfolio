@@ -44,10 +44,6 @@
 }
 
 /* Header */
-.cadet-logo { left: calc(50% - 665 * var(--u)); top: calc(50% - 351 * var(--u)); display: flex; align-items: center; gap: calc(12 * var(--u)); color: #fff; text-decoration: none; z-index: 6; }
-.cadet-disc { width: calc(35 * var(--u)); height: calc(35 * var(--u)); border-radius: 50%; flex: none;
-  background: conic-gradient(from 210deg, #35E0FF, #2F6BFF, #8A4DFF, #FF5FB7, #35E0FF); }
-.cadet-logo span:last-child { font-weight: 600; font-size: calc(29.5 * var(--u)); letter-spacing: -.01em; }
 .cadet-nav { right: calc(50% - 665 * var(--u)); top: calc(50% - 347 * var(--u)); display: flex; gap: calc(36 * var(--u)); z-index: 6; }
 .cadet-nav a { color: #fff; text-decoration: none; font-weight: 600; font-size: calc(18 * var(--u)); letter-spacing: .04em; transition: opacity .2s; }
 .cadet-nav a:hover { opacity: .7; }
@@ -98,10 +94,7 @@
 .cadet-ring { width: 44px; height: 44px; margin: -22px 0 0 -22px; border: 1.5px solid #fff; }
 
 @media (max-width: 820px) {
-  .cadet-logo { left: 16px; top: 20px; gap: 0; }
-  .cadet-logo span:last-child { display: none; }
-  .cadet-disc { width: 28px; height: 28px; }
-  .cadet-nav { right: 16px; top: 26px; gap: 12px; }
+        .cadet-nav { right: 16px; top: 26px; gap: 12px; }
   .cadet-nav a { font-size: 12px; letter-spacing: .02em; }
   .cadet-copy { top: 78px; padding: 0 8px; }
   .cadet-sub { display: block; font-size: 15px; margin-top: 10px; }
