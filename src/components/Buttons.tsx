@@ -3,7 +3,7 @@ import { ArrowUpRight } from 'lucide-react';
 export const EMAIL = 'karthiksaipothireddy6@gmail.com';
 export const GITHUB_URL = 'https://github.com/karthiksai-pothireddy';
 // Paste your LinkedIn profile URL here; the LinkedIn button stays hidden while this is empty.
-export const LINKEDIN_URL = '';
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/karthik-p7974/';
 export const RESUME_URL = '/Karthik_Pothireddy_Resume.pdf';
 
 export function ContactButton({ label = 'Contact Me' }: { label?: string }) {
