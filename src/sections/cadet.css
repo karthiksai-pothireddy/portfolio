@@ -67,7 +67,7 @@
 /* Bottom corners: quote + Scroll Down (left), Contact Me (right) — Jack-style purple buttons */
 .cadet-bl, .cadet-br { bottom: calc(50% - 370 * var(--u)); z-index: 6; }
 .cadet-bl { left: calc(50% - 665 * var(--u)); display: flex; flex-direction: column; align-items: flex-start; gap: calc(18 * var(--u)); }
-.cadet-br { right: calc(50% - 665 * var(--u)); }
+.cadet-br { right: calc(50% - 665 * var(--u)); display: flex; align-items: center; gap: calc(14 * var(--u)); }
 .cadet-tagline {
   font-family: 'Kanit', sans-serif; font-weight: 300; text-transform: uppercase; letter-spacing: .025em;
   line-height: 1.375; color: #D7E2EA; font-size: clamp(0.75rem, 1.4vw, 1.5rem); max-width: 260px;
@@ -107,5 +107,7 @@
   .cadet-sub { display: block; font-size: 15px; margin-top: 10px; }
   .cadet-tagline { display: none; }
   .cadet-bl, .cadet-br { bottom: 20px; }
-  .cadet-bl { left: 16px; } .cadet-br { right: 16px; }
+  .cadet-bl { left: 16px; }
+  /* Phones: icon-only scroll sits above Contact Me so the pair clears PUSH ME */
+  .cadet-br { right: 16px; flex-direction: column; align-items: flex-end; gap: 10px; }
 }

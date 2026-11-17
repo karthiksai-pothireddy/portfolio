@@ -25,12 +25,17 @@ export function ContactButton({ label = 'Contact Me', compact = false }: { label
   );
 }
 
+// Low-key ghost button: no purple fill, soft translucent border, dimmer text. Icon-only on phones.
 export function ScrollButton({ href = '#about' }: { href?: string }) {
   return (
-    <a href={href} className={`${BASE} ${SIZE_COMPACT}`} style={PURPLE} aria-label="Scroll down">
-      <span className="md:hidden">Scroll</span>
+    <a
+      href={href}
+      aria-label="Scroll down"
+      className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 backdrop-blur-sm text-white/70 font-medium uppercase tracking-widest whitespace-nowrap p-2.5 md:px-8 md:py-4 text-[11px] md:text-sm transition-colors duration-200 hover:text-white hover:border-white/50"
+      style={{ fontFamily: 'Kanit, sans-serif' }}
+    >
       <span className="hidden md:inline">Scroll Down</span>
-      <ArrowDown className="w-4 h-4 md:w-5 md:h-5 animate-bounce" />
+      <ArrowDown className="w-4 h-4" />
     </a>
   );
 }

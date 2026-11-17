@@ -160,9 +160,9 @@ export default function HeroSection() {
 
       <div className="abs cadet-bl">
         <p className="cadet-tagline">Building systems that scale past the stars</p>
-        <ScrollButton />
       </div>
       <div className="abs cadet-br">
+        <ScrollButton />
         <ContactButton compact />
       </div>
 
